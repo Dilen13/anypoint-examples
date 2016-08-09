@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.mule.examples</groupId>
 		<artifactId>examples-catalog</artifactId>
-		<version>1.4.0-SNAPSHOT</version>
+		<version>1.4.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -50,6 +50,9 @@
 					<systemPropertyVariables>   
 						<java.library.path>${project.basedir}/libraries/SAP.${sap.jco.version}</java.library.path>
 					</systemPropertyVariables>
+					<dynamicPorts>
+						<dynamicPort>http.port</dynamicPort>
+					</dynamicPorts>
 				</configuration>                
                 <executions>
                     <execution>

@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>org.mule.examples</groupId>
 		<artifactId>examples-catalog</artifactId>
-		<version>1.4.0-SNAPSHOT</version>
+		<version>1.4.1-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -112,7 +112,7 @@
 		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-module-netsuite</artifactId>
-			<version>7.0.0</version>
+			<version>7.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.weave</groupId>

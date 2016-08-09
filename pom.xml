@@ -5,7 +5,7 @@
 
     <groupId>org.mule.examples</groupId>
     <artifactId>examples-catalog</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.4.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -75,11 +75,11 @@
         <muleConfigVersion>EE-3.8.0</muleConfigVersion>
         <mule.version>3.8.0</mule.version>
         <muleSchemaVersion>3.5.0.0</muleSchemaVersion>
-		<sfdc.version>7.0.1</sfdc.version>
+		<sfdc.version>7.1.0</sfdc.version>
 		<mule.tools.version>1.0</mule.tools.version>
 		<mule.test.timeoutSecs>60</mule.test.timeoutSecs>
 		<munit.version>1.1.0</munit.version>
-		<mule.munit.support.version>3.8.0-SNAPSHOT</mule.munit.support.version>
+		<mule.munit.support.version>3.8.0</mule.munit.support.version>
     </properties>
 
     <build>
@@ -151,6 +151,27 @@
                     </systemProperties>
                 </configuration>
             </plugin>
+			
+			<!--Random port definition for test-->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.9</version>
+				<executions>
+					<execution>
+						<id>reserve-network-port</id>
+						<goals>
+							<goal>reserve-network-port</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<portNames>
+								<portName>http.port</portName>
+							</portNames>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
         </plugins>
 	</build>
 

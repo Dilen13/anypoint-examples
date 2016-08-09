@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.mule.examples</groupId>
 		<artifactId>examples-catalog</artifactId>
-		<version>1.4.0-SNAPSHOT</version>
+		<version>1.4.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -49,6 +49,11 @@
 						<goals>
 							<goal>test</goal>
 						</goals>
+						<configuration>
+							<dynamicPorts>
+								<dynamicPort>http.port</dynamicPort>
+							</dynamicPorts>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>
